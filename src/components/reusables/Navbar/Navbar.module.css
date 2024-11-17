@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body{
+    background-color: #081b29;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    padding: 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a{
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 100px;
+    transition: 3s;
+
+}
+nav a:hover,
+nav a.active {
+    color: #00abf0;
+}
+.responsiveContainer{
+    display: none;
+}
+.Hamburger{
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    header{
+        background: #00abf0;
+    }
+    .responsiveContainer{
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        height: 5rem;
+        padding-top: 10px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hamburgerText {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 3.40rem;
+        gap: 3rem;
+        width: 14.50rem;
+        height: 20rem;
+        background-color: #081b29;
+        position: unset;
+        border: 3px solid white;
+
+    }
+    .firstDiv{
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .hamburgerText a{
+        font-size: 18px;
+        color: #ededed;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 3s;
+        padding-top: -30px;
+
+    }
+    .hamburgerText a:hover {
+        color: #00abf0;
+    }
+    .Hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 1.65rem;
+        color: #00abf0;
+        padding-top: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+    .responsiveContainer{
+        gap: 3rem;
+        height: 5rem;
+        padding-top: 10px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hamburgerText {
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        gap: 2rem;
+        padding-right: 2rem;
+    }
+    .hamburgerText a{
+        font-size: 20px;
+        color: #ededed;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 3s;
+        padding-top: -30px;
+
+    }
+    .hamburgerText a:hover {
+        color: #00abf0;
+    }
+    .Hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 1.65rem;
+        color: #00abf0;
+        padding-top: 1rem;
+    }
+}

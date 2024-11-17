@@ -1,0 +1,170 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+    gap: 4rem;
+
+}
+.homeContent{
+    max-width: 600px;
+}
+
+.homeContent h1 {
+    font-size: 56px;
+    font-weight: 700;
+    font-family: 'Galvji', sans-serif;
+    line-height: 1.2;
+}
+
+.homeContent h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.homeContent p{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    margin: 20px 0 40px;
+
+}
+
+.homeContent .buttonBox{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.buttonBox a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background-color:#00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    font-weight: 600;
+    color: #081b29;
+    text-decoration: none;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.buttonBox a:nth-child(2){
+ background-color: transparent;
+    color: #00abf0;
+}
+.buttonBox a:nth-child(1):hover{
+    background-color: transparent;
+    color: #FFFFFF;
+}
+.buttonBox a:nth-child(2):hover{
+    color: #FFFFFF;
+    border: 2px solid white;
+}
+.socials{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.socials a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.socials a::before{
+    content: "";
+    top:0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    transition: .9s;
+}
+
+.socials a:hover::before{
+    width: 100%;
+    background: transparent;
+}
+
+img{
+    width: 30rem;
+    height: 30rem;
+    border: 10px solid #00abf0;
+    border-radius: 1800px;
+
+}
+
+
+@media (max-width: 768px) {
+   .home{
+       flex-direction: column;
+       padding-top: 7rem;
+
+   }
+    .homeContent{
+        max-width: 400px;
+    }
+    .homeContent h1 {
+        font-size: 46px;
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    .homeContent h3{
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .homeContent p{
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 1.3;
+        margin: 15px 0 35px;
+
+    }
+
+    .homeContent .buttonBox{
+        width: 325px;
+        height: 45px;
+    }
+
+    img{
+        width: 20rem;
+        height: 20rem;
+        border: 5px solid #00abf0;
+        border-radius: 1800px;
+
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+}
+

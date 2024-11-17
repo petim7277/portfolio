@@ -1,12 +1,9 @@
-import Home from "./home/Home";
-import About from "./about_me/about";
 
-const Features = () => {
+const Skills = () => {
     return(
-        <>
-            <Home/>
-
-        </>
-    )
+        <section >
+            <p>Hello i represent the skills section</p>
+        </section>
+    );
 }
-export default Features;
+export default Skills;
