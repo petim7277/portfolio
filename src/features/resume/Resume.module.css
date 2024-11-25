@@ -1,0 +1,44 @@
+.mainContainer {
+    padding-top: 5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*.pdfDiv{*/
+/*    background: #FFFFFF;*/
+/*    width: 50rem;*/
+/*    height: 50rem;*/
+/*}*/
+
+.wrapperContainer {
+    border: #00abf0 solid 3px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    height: 50rem;
+    width: 50rem;
+}
+
+.wrapperContainer h1 {
+    color: #00abf0;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.wrapperContainer p {
+    color: #f34d3a;
+    padding-top: 1px;
+    padding-left: 30px;
+}
+
+.icon{
+    width: 1rem;
+    height: 1rem;
+    padding-top: 4px;
+}
+
+.wrapperContainer h6{
+    color: red;
+    padding-left: 30px;
+}

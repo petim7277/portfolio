@@ -3,9 +3,18 @@
     flex-direction: row;
     align-items: center;
     height: 100vh;
-    padding: 0 10%;
+    width: 100vw;
+    padding: 0 6%;
     gap: 4rem;
+}
+@keyframes myAnim {
+    0% {
+        transform: scale(0.5);
+    }
 
+    100% {
+        transform: scale(1);
+    }
 }
 .homeContent{
     max-width: 600px;
@@ -16,12 +25,15 @@
     font-weight: 700;
     font-family: 'Galvji', sans-serif;
     line-height: 1.2;
+    animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
 .homeContent h3{
     font-size: 32px;
     font-weight: 700;
     color: #00abf0;
+    animation: myAnim 2.5s ease 0s 1 normal forwards;
+
 }
 
 .homeContent p{
@@ -30,6 +42,7 @@
     letter-spacing: 1px;
     line-height: 1.4;
     margin: 20px 0 40px;
+    animation: myAnim 3s ease 0s 1 normal forwards;
 
 }
 
@@ -38,10 +51,10 @@
     justify-content: space-between;
     width: 345px;
     height: 50px;
+    animation: myAnim 3.5s ease 0s 1 normal forwards;
 }
 
 .buttonBox a{
-    position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -55,29 +68,22 @@
     color: #081b29;
     text-decoration: none;
     letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
+
 }
 
 .buttonBox a:nth-child(2){
  background-color: transparent;
     color: #00abf0;
 }
-.buttonBox a:nth-child(1):hover{
-    background-color: transparent;
-    color: #FFFFFF;
-}
-.buttonBox a:nth-child(2):hover{
-    color: #FFFFFF;
-    border: 2px solid white;
-}
+
 .socials{
-    position: absolute;
     bottom: 40px;
     width: 170px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 50px;
+    animation: myAnim 4s ease 0s 1 normal forwards;
 }
 .socials a{
     position: relative;
@@ -112,37 +118,64 @@
     background: transparent;
 }
 
-img{
-    width: 30rem;
-    height: 30rem;
-    border: 10px solid #00abf0;
-    border-radius: 1800px;
+.mobileSocials{
+    display: none;
+}
+@keyframes myAnim {
+    0% {
+        transform: scale(0.5);
+    }
 
+    100% {
+        transform: scale(1);
+    }
 }
 
+img{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 80px;
+    animation: myAnim 4.5s ease 0s 1 normal forwards;
+}
 
 @media (max-width: 768px) {
    .home{
+       width: 100vw;
+       height: 100vh;
        flex-direction: column;
        padding-top: 7rem;
+       position: absolute;
+
 
    }
+    @keyframes myAnim {
+        0% {
+            transform: scale(0.5);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
     .homeContent{
-        max-width: 400px;
+        max-width: 600px;
+        /*animation: myAnim 3s ease 0s 1 normal forwards;*/
+
     }
     .homeContent h1 {
-        font-size: 46px;
+        font-size: 50px;
         font-weight: 600;
         line-height: 1;
     }
 
     .homeContent h3{
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 600;
+        padding-top: 20px;
     }
 
     .homeContent p{
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
         letter-spacing: 1px;
         line-height: 1.3;
@@ -155,16 +188,104 @@ img{
         height: 45px;
     }
 
+    .socials{
+        position: unset;
+    }
+
     img{
         width: 20rem;
         height: 20rem;
         border: 5px solid #00abf0;
-        border-radius: 1800px;
+        border-radius: 70px;
 
     }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
+    .socials{
+        display: none;
+    }
+    .home{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .homeContent{
+        max-width: 250px;
+        padding: 0;
+        margin: 0;
+    }
+    .homeContent h1 {
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .homeContent h3{
+        font-size: 25px;
+        font-weight: 600;
+        padding-top: 5px;
+    }
+
+    .homeContent p{
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 1.3;
+        margin: 15px 0 35px;
+
+    }
+
+    .homeContent .buttonBox{
+        display: flex;
+        justify-content: left;
+        width: 325px;
+        height: 45px;
+        gap: 2rem;
+    }
+
+    .buttonBox a{
+
+        width: 120px;
+        height: 50px;
+    }
+
+    .mobileSocials{
+        bottom : 40px;
+        width: 170px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+    .mobileSocials a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: 2px solid #00abf0;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #00abf0;
+        text-decoration: none;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+
+    img{
+        width: 18rem;
+        height: 18rem;
+        border: 2px solid #00abf0;
+        border-radius: 40px;
+    }
 
 }
 

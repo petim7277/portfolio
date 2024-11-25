@@ -4,6 +4,7 @@ import About from "../features/about_me/about";
 import Skills from "../features/skills/Skills";
 import Projects from "../features/projects/Projects";
 import Contact from "../features/contact/Contact";
+import Resume from "../features/resume/Resume";
 
 export const Routes =[
 
@@ -33,6 +34,11 @@ export const Routes =[
         {
             path:"/contact",
             element:<Contact/>,
+        },
+
+        {
+            path:"/resume",
+            element:<Resume/>,
         },
     ]
     }

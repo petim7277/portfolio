@@ -1,0 +1,205 @@
+@keyframes myAnim {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.about {
+    padding-top: 10rem;
+    height: 100vh;
+    width: 100vw;
+}
+.aboutContent {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutContent h1{
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.aboutContent h5{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    animation: myAnim 2.5s ease 0s normal forwards;
+    color: #00abf0;
+}
+
+.aboutContent .icon {
+    font-size: 35px;
+    animation: myAnim 2.5s ease 0s normal forwards;
+
+}
+.aboutContent p{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    letter-spacing: 1px;
+    line-height: 25px;
+    animation: myAnim 2.5s ease 0s normal forwards;
+    color: #FFFFFF;
+}
+
+.aboutContent p:hover{
+    animation: myAnim 2.5s ease 0s normal paused;
+}
+
+.aboutFeatures{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    padding-top: 3rem;
+}
+.featuresBox{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 8rem;
+    height: 8rem;
+    text-align: center;
+    padding-top: 10px;
+    animation: myAnim 2.5s ease 0s normal forwards;
+}
+
+.featuresBox img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.featuresBox p{
+    color: white;
+}
+.featuresBox span{
+    display: block;
+    color: #00abf0;
+    font-size: 15px;
+    max-width: 100%;
+    padding-top: 10px;
+    padding-left: 0.50rem;
+    padding-right: 0.50rem;
+}
+
+.buttonBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 2.50rem;
+    margin: 40px 0;
+    animation: myAnim 2.5s ease 0s normal forwards;
+}
+
+
+.buttonBox a{
+    width: 7rem;
+    height: 2.50rem;
+    text-decoration: none;
+    text-align: center;
+    color: #081b29;
+    font-weight: 600;
+    font-size: 15px;
+    background: #00abf0;
+    border-radius: 8px;
+    border: 2px solid #033e57;
+    cursor: pointer;
+    padding-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding-top: 5rem;
+        height: 100vh;
+        width: 100vw;
+    }
+
+
+    .aboutContent h1{
+        font-size: 40px;
+    }
+    .aboutContent h5{
+        font-size: 25px;
+    }
+
+    .aboutContent .icon {
+        font-size: 30px;
+    }
+    .aboutContent p{
+        font-size: 14px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+
+    .aboutFeatures{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        gap: 3rem;
+        padding-top: 3rem;
+    }
+    .featuresBox{
+        border: 1px solid white;
+        border-radius: 10px;
+        width: 12rem;
+        height: 10rem;
+        text-align: center;
+        animation: myAnim 2.5s ease 0s normal forwards;
+    }
+
+    .featuresBox img{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .featuresBox p{
+        color: white;
+    }
+    .featuresBox span{
+        display: block;
+        color: #00abf0;
+        font-size: 15px;
+        max-width: 100%;
+        padding-top: 10px;
+        padding-left: 0.50rem;
+        padding-right: 0.50rem;
+    }
+
+    .buttonBox{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 2.50rem;
+        margin: 40px 0;
+        animation: myAnim 2.5s ease 0s normal forwards;
+    }
+
+
+    .buttonBox a{
+        width: 7rem;
+        height: 2.50rem;
+        text-decoration: none;
+        text-align: center;
+        color: #081b29;
+        font-weight: 600;
+        font-size: 15px;
+        background: #00abf0;
+        border-radius: 8px;
+        border: 2px solid #033e57;
+        cursor: pointer;
+        padding-top: 15px;
+    }
+}
