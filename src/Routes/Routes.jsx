@@ -1,10 +1,10 @@
 import Layout from "../components/layout/Layout";
 import Features from "../features/Features";
-import About from "../features/about_me/about";
+import About from "../features/about/about";
 import Skills from "../features/skills/Skills";
 import Projects from "../features/projects/Projects";
 import Contact from "../features/contact/Contact";
-import Resume from "../features/resume/Resume";
+import LetsTalk from "../features/lets_talk/LetsTalk";
 
 export const Routes =[
 
@@ -37,9 +37,10 @@ export const Routes =[
         },
 
         {
-            path:"/resume",
-            element:<Resume/>,
+            path:"/letsTalk",
+            element:<LetsTalk/>,
         },
     ]
     }
 ];
+

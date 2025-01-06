@@ -9,9 +9,10 @@
 }
 
 .about {
-    padding-top: 10rem;
+    margin-top: 25rem;
     height: 100vh;
     width: 100vw;
+    position: fixed;
 }
 .aboutContent {
     width: 100%;
@@ -91,37 +92,32 @@
     padding-left: 0.50rem;
     padding-right: 0.50rem;
 }
-
 .buttonBox{
-    width: 100%;
     display: flex;
     justify-content: center;
-    height: 2.50rem;
-    margin: 40px 0;
-    animation: myAnim 2.5s ease 0s normal forwards;
+    padding-top: 3rem;
+
 }
-
-
-.buttonBox a{
+.cvButton {
+    background-color: #00abf0;
+    color: white;
+    text-decoration: none;
+    border-radius: 9px;
+    border: 1px solid #ffffff;
+    font-size: 16px;
     width: 7rem;
     height: 2.50rem;
-    text-decoration: none;
     text-align: center;
-    color: #081b29;
-    font-weight: 600;
-    font-size: 15px;
-    background: #00abf0;
-    border-radius: 8px;
-    border: 2px solid #033e57;
-    cursor: pointer;
-    padding-top: 15px;
+    padding-top: 0.80rem;
 }
+
 
 @media (max-width: 768px) {
     .about {
-        padding-top: 5rem;
-        height: 100vh;
+        margin-top: 70rem;
+        height: auto;
         width: 100vw;
+        position: fixed;
     }
 
 

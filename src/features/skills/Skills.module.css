@@ -1,5 +1,10 @@
 .skills {
-    padding-top: 10rem;
+    /*padding-top: 50rem;*/
+    margin-top: 58rem;
+    border: 3px solid greenyellow;
+    position: fixed;
+    width: 100%;
+    height: auto;
 }
 
 .skillsContent img {

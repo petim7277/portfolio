@@ -1,11 +1,10 @@
 import styles from './about.module.css';
 import { GrTechnology } from "react-icons/gr";
-import coding from "../../assets/tagIcon.png"
 import project_icon from "../../assets/projectIcon.png"
 import support_icon from "../../assets/supportIcon.png"
 import badge_icon from "../../assets/badgeIcon.png"
-import Resume from "../resume/Resume";
-import {Link} from "react-router-dom";
+import CV from "../../assets/EtimPreciousCV.pdf"
+
 
 const About = () => {
 
@@ -38,7 +37,7 @@ const About = () => {
                  <div className={styles.featuresBox}>
                      <img src={project_icon} alt=""/>
                      <p>Projects
-                         <span>Over 8+ Completed Projects</span>
+                         <span>Over 4+ Diverse Projects</span>
                      </p>
                  </div>
 
@@ -51,10 +50,17 @@ const About = () => {
          </div>
 
             <div className={styles.buttonBox}>
-                <a href="/resume">View Cv</a>
+                <a
+                    href={CV}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={ styles.cvButton}
+                >
+                    View My CV
+                </a>
             </div>
 
         </section>
-)
+    )
 }
 export default About;
