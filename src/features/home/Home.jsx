@@ -15,7 +15,8 @@ const Home = () => {
                 <h3>Software Engineer</h3>
                 <p>Precious is a software engineer driven by a growth mindset, powered with grit, and ready to
                     bring impact to any organization she finds herself in. She prides herself on strong coding skills
-                    demonstrated through diverse projects, ability to adapt to change, the ability to ask questions when necessary, and a strong
+                    demonstrated through diverse projects, ability to adapt to change, the ability to ask questions when
+                    necessary, and a strong
                     desire to work on innovative projects and solutions that lead to change.</p>
                 <div className={styles.buttonBox}>
                     <a href={CV}
@@ -37,7 +38,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <img  src={heroImage} alt={"precious-hero "}/>
+            <img src={heroImage} alt={"precious-hero "}/>
 
         </section>
     )

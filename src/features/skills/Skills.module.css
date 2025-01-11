@@ -1,13 +1,85 @@
 .skills {
-    /*padding-top: 50rem;*/
     margin-top: 58rem;
     border: 3px solid greenyellow;
     position: fixed;
     width: 100%;
     height: auto;
 }
+.skillsText{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 5rem;
+}
+.skillsTextBox {
+    width: 15rem;
+    height: 10rem;
+    border: 1px solid #00abf0;
+    border-radius: 1rem;
+}
+.skillsTextBox h5{
+    padding-top: 1rem;
+    text-align: center;
+    padding-bottom: 1rem;
+
+}
+.skillsTextBox li{
+    padding-left: 1rem;
+}
 
 .skillsContent img {
-    width: 4rem;
-    height: 4rem;
+    width: 3.50rem;
+    height: 3.50rem;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.skillsContent{
+    display: grid;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+}
+.skills h1{
+    text-align: center;
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .skills {
+        margin-top: 150rem;
+        border: 3px solid greenyellow;
+        position: absolute;
+        width: 100vw;
+        height: 135vh;
+        justify-content: space-between;
+
+    }
+    .skillsText{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-bottom: 3rem;
+        padding-left: 3.50rem;
+        gap: 2rem;
+    }
+    .skillsContent img {
+        width: 2rem;
+        height: 2rem;
+        border: none;
+
+    }
+    .skillsContent{
+        display: grid;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
 }

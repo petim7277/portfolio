@@ -100,11 +100,11 @@
 }
 .cvButton {
     background-color: #00abf0;
-    color: white;
+    color: #022740;
     text-decoration: none;
     border-radius: 9px;
-    border: 1px solid #ffffff;
     font-size: 16px;
+    font-weight: bold;
     width: 7rem;
     height: 2.50rem;
     text-align: center;
@@ -115,8 +115,8 @@
 @media (max-width: 768px) {
     .about {
         margin-top: 70rem;
-        height: auto;
         width: 100vw;
+        height: 100vh;
         position: fixed;
     }
 
@@ -175,27 +175,21 @@
     }
 
     .buttonBox{
-        width: 100%;
         display: flex;
         justify-content: center;
-        height: 2.50rem;
-        margin: 40px 0;
-        animation: myAnim 2.5s ease 0s normal forwards;
+        padding-top: 3rem;
+
     }
-
-
-    .buttonBox a{
-        width: 7rem;
-        height: 2.50rem;
+    .cvButton {
+        background-color: #00abf0;
+        color: #022740;
         text-decoration: none;
-        text-align: center;
-        color: #081b29;
+        border-radius: 9px;
+        font-size: 16px;
         font-weight: 600;
-        font-size: 15px;
-        background: #00abf0;
-        border-radius: 8px;
-        border: 2px solid #033e57;
-        cursor: pointer;
-        padding-top: 15px;
+        width: 12rem;
+        height: 3rem;
+        text-align: center;
+        padding-top: 0.80rem;
     }
 }
