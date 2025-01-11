@@ -1,6 +1,5 @@
 .skills {
     margin-top: 58rem;
-    border: 3px solid greenyellow;
     position: fixed;
     width: 100%;
     height: auto;
@@ -50,7 +49,6 @@
 @media (max-width: 768px) {
     .skills {
         margin-top: 150rem;
-        border: 3px solid greenyellow;
         position: absolute;
         width: 100vw;
         height: 135vh;
