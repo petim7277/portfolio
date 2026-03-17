@@ -12,7 +12,7 @@ const Contact = () => {
         </div>
         <div className={styles.links}>
           <a href="https://github.com/petim7277" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/etim-precious-995b2a296/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="www.linkedin.com/in/precious-etim-995b2a296" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="mailto:petim7277@gmail.com">Email</a>
         </div>
       </div>
