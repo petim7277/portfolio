@@ -1,0 +1,16 @@
+.footer { background-color: var(--text-dark); color: white; padding: 4rem 5% 2rem; }
+.container {
+  max-width: 1200px; margin: 0 auto; display: flex;
+  justify-content: space-between; align-items: center; border-bottom: 1px solid #4a5568;
+  padding-bottom: 2rem; margin-bottom: 2rem;
+}
+.brand { font-size: 1.5rem; color: var(--brand-orange); margin-bottom: 0.5rem; }
+.info p { color: #a0aec0; }
+.links { display: flex; gap: 1.5rem; }
+.links a { color: white; transition: var(--transition); }
+.links a:hover { color: var(--brand-orange); }
+.copyright { text-align: center; color: #a0aec0; font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+  .container { flex-direction: column; text-align: center; gap: 2rem; }
+}

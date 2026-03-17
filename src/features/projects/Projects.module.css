@@ -1,0 +1,55 @@
+.projectsSection { padding: 8rem 5%; position: relative; }
+.container { max-width: 1200px; margin: 0 auto; }
+.heading { font-size: 3rem; margin-bottom: 4rem; text-align: center; font-weight: 800; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
+
+/* The Glassmorphism Magic */
+.glassCard {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover glow effect */
+.glassCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--brand-orange), transparent);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.glassCard:hover {
+  border-color: rgba(255, 150, 51, 0.3);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.glassCard:hover::before { opacity: 1; }
+
+.cardHeader { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.folderIcon { font-size: 2rem; filter: grayscale(100%); transition: var(--transition); }
+.glassCard:hover .folderIcon { filter: grayscale(0%); }
+
+.title { font-size: 1.5rem; color: var(--text-main); font-weight: 700; }
+.description { color: var(--text-muted); margin-bottom: 2rem; font-size: 1.05rem; }
+
+.techStack { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.techPill {
+  font-size: 0.85rem;
+  color: var(--brand-orange);
+  background: var(--brand-orange-glow);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}

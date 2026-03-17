@@ -1,0 +1,15 @@
+.ctaSection { padding: 5rem 5%; background-color: var(--brand-orange); color: white; text-align: center; }
+.container { max-width: 800px; margin: 0 auto; }
+.heading { font-size: 2.5rem; margin-bottom: 1rem; }
+.text { font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9; }
+.button {
+  display: inline-block;
+  background-color: white;
+  color: var(--brand-orange);
+  padding: 0.8rem 2rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+.button:hover { background-color: var(--bg-gray); transform: scale(1.05); }

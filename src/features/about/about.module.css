@@ -1,0 +1,83 @@
+.aboutSection { 
+  background-color: var(--bg-dark); 
+  padding: 8rem 5%; 
+  position: relative; 
+}
+
+.container { 
+  max-width: 1000px; 
+  margin: 0 auto; 
+}
+
+.heading { 
+  font-size: 3rem; 
+  margin-bottom: 4rem; 
+  text-align: center; 
+  font-weight: 800; 
+  color: var(--text-main); 
+}
+
+.timeline { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 3rem; 
+  border-left: 2px solid var(--border-glass); 
+  padding-left: 2.5rem; 
+  margin-left: 1rem; 
+}
+
+/* THE FIX: No more background: white! We use the dark glass effect */
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-glass);
+  position: relative;
+  transition: var(--transition);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  left: -3.35rem; 
+  top: 2.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--brand-orange);
+  box-shadow: 0 0 15px var(--brand-orange-glow);
+  border: 4px solid var(--bg-dark);
+}
+
+.card:hover { 
+  border-color: rgba(255, 150, 51, 0.3); 
+  transform: translateX(10px); 
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.role { 
+  font-size: 1.5rem; 
+  color: var(--text-main); 
+  font-weight: 700; 
+  margin-bottom: 0.3rem; 
+}
+
+.company { 
+  font-size: 1.1rem; 
+  color: var(--brand-orange); 
+  font-weight: 600; 
+  margin-bottom: 1.5rem; 
+  display: inline-block;
+}
+
+.list { 
+  padding-left: 1.2rem; 
+}
+
+.listItem { 
+  margin-bottom: 0.8rem; 
+  color: var(--text-muted); 
+  font-size: 1.05rem; 
+}

@@ -1,0 +1,79 @@
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 5% 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* The badass background glow */
+.glowOrb {
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: var(--brand-orange);
+  filter: blur(150px);
+  opacity: 0.15;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.content { flex: 1; padding-right: 2rem; z-index: 1; }
+.greeting { color: var(--brand-orange); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
+.title { font-size: 4.5rem; line-height: 1.1; margin-bottom: 0.5rem; font-weight: 800; }
+.subtitle { font-size: 2rem; color: var(--text-main); margin-bottom: 1.5rem; font-weight: 500; }
+.bio { font-size: 1.15rem; margin-bottom: 2.5rem; color: var(--text-muted); max-width: 500px; }
+
+.actions { display: flex; gap: 1.5rem; }
+.primaryBtn, .secondaryBtn {
+  padding: 1rem 2rem;
+  border-radius: 30px; /* Pill shape for modern look */
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.primaryBtn { 
+  background: var(--brand-orange); 
+  color: #000; /* Dark text on bright button pops */
+  border: none;
+}
+
+.secondaryBtn { 
+  background: transparent; 
+  color: var(--text-main); 
+  border: 1px solid var(--border-glass); 
+  backdrop-filter: blur(10px);
+}
+
+.imageContainer { flex: 1; display: flex; justify-content: flex-end; z-index: 1; }
+.imageWrapper {
+  position: relative;
+  border-radius: 30px;
+  padding: 10px;
+  background: linear-gradient(145deg, var(--border-glass), transparent);
+  border: 1px solid var(--border-glass);
+}
+.profileImage { 
+  max-width: 400px; 
+  width: 100%; 
+  border-radius: 20px; 
+  filter: grayscale(20%) contrast(110%);
+  transition: var(--transition);
+}
+.profileImage:hover { filter: grayscale(0%) contrast(100%); }
+
+@media (max-width: 900px) {
+  .heroSection { flex-direction: column; text-align: center; padding-top: 6rem; }
+  .content { padding-right: 0; margin-bottom: 4rem; }
+  .bio { margin: 0 auto 2.5rem; }
+  .actions { justify-content: center; }
+}
