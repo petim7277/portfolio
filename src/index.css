@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :root {
   /* Lighter, electric orange */
   --brand-orange: #FF9633;
@@ -38,18 +37,3 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-=======
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
->>>>>>> 02db15c14e7a933723872583f387341330423c21
