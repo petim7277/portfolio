@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Home from './home/Home';
 import About from './about/about';
@@ -20,3 +21,19 @@ const Features = () => {
 };
 
 export default Features;
+=======
+import About from "./about/about";
+import Home from "./home/Home";
+import Skills from "./skills/Skills";
+
+const Features = () => {
+    return(
+        <>
+            <Home/>
+            <About/>
+            <Skills/>
+        </>
+    )
+}
+export default Features;
+>>>>>>> 02db15c14e7a933723872583f387341330423c21
