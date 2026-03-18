@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Home.module.css';
-import heroPic from '../../assets/beauty.png'; 
+import heroPic from '../../assets/beauty.png';
+import cvFile from '../../assets/PRECIOUS-ETIM-FRONTEND-CV.pdf'; 
 
 const Home = () => {
   // Animation variants for staggered text
@@ -50,7 +51,7 @@ const Home = () => {
             View Projects
           </motion.a>
           <motion.a 
-            href="../../assets/EtimPreciousCV.pdf" 
+            href={cvFile}
             download 
             className={styles.secondaryBtn}
             whileHover={{ scale: 1.05, borderColor: "#FF9633", color: "#FF9633" }}

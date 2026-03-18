@@ -79,12 +79,17 @@ const Projects = () => {
                   </div>
 
                   <div className={styles.links}>
-                    <a href={project.githubLink} target="_blank" rel="noreferrer" className={styles.linkBtn}>
-                      <span className={styles.icon}>&lt;/&gt;</span> Code
-                    </a>
-                    <a href={project.liveLink} target="_blank" rel="noreferrer" className={styles.linkBtn}>
-                      Live Site <span className={styles.arrow}>↗</span>
-                    </a>
+                    {/* CONDITIONAL RENDERING RESTORED */}
+                    {project.githubLink && (
+                      <a href={project.githubLink} target="_blank" rel="noreferrer" className={styles.linkBtn}>
+                        <span className={styles.icon}>&lt;/&gt;</span> Code
+                      </a>
+                    )}
+                    {project.liveLink && (
+                      <a href={project.liveLink} target="_blank" rel="noreferrer" className={styles.linkBtn}>
+                        Live Site <span className={styles.arrow}>↗</span>
+                      </a>
+                    )}
                   </div>
                 </div>
 
