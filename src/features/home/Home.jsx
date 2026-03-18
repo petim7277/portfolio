@@ -37,7 +37,7 @@ const Home = () => {
         </motion.h2>
         <motion.p variants={itemVars} className={styles.bio}>
           I engineer scalable, production-ready systems and craft flawless user experiences. 
-          Driven by logic, built with intention, and styled with precision.
+          Driven by logic, built with intention and styled with precision.
         </motion.p>
         
         <motion.div variants={itemVars} className={styles.actions}>
@@ -61,16 +61,18 @@ const Home = () => {
         </motion.div>
       </motion.div>
 
+      {/* THE PLAYFUL IMAGE SECTION */}
       <motion.div 
         className={styles.imageContainer}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
+        animate={{ opacity: 1, scale: 1, rotate: 0 }}
+        transition={{ duration: 1, type: "spring", bounce: 0.5 }} /* Springy bounce on load */
       >
         <motion.div 
           className={styles.imageWrapper}
-          animate={{ y: [-10, 10, -10] }} /* Floating effect */
-          transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+          animate={{ y: [-15, 15, -15] }} 
+          transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+          whileHover={{ scale: 1.05, rotate: 5 }} /* Playful tilt when you hover */
         >
           <img src={heroPic} alt="Precious Etim" className={styles.profileImage} />
         </motion.div>

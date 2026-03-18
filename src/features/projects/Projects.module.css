@@ -1,55 +1,216 @@
-.projectsSection { padding: 8rem 5%; position: relative; }
-.container { max-width: 1200px; margin: 0 auto; }
-.heading { font-size: 3rem; margin-bottom: 4rem; text-align: center; font-weight: 800; }
+.projectsSection { 
+  padding: 8rem 5%; 
+  background-color: var(--bg-dark); 
+  position: relative; 
+}
 
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
+.container { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+}
 
-/* The Glassmorphism Magic */
-.glassCard {
+.headerWrapper {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.heading { 
+  font-size: 3.5rem; 
+  margin-bottom: 0.5rem; 
+  color: var(--text-main); 
+}
+
+.subtext {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem; /* Massive gap for cinematic breathing room */
+}
+
+/* THE CARD LAYOUT */
+.projectCard {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.row { flex-direction: row; }
+.rowReverse { flex-direction: row-reverse; }
+
+/* VISUAL SIDE */
+.visualColumn {
+  flex: 1.2;
+  position: relative;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
   background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
   border: 1px solid var(--border-glass);
-  padding: 2.5rem;
-  border-radius: var(--border-radius);
-  transition: var(--transition);
   position: relative;
   overflow: hidden;
-}
-
-/* Hover glow effect */
-.glassCard::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--brand-orange), transparent);
-  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
   transition: var(--transition);
 }
 
-.glassCard:hover {
-  border-color: rgba(255, 150, 51, 0.3);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-  background: rgba(255, 255, 255, 0.05);
+.projectCard:hover .imagePlaceholder {
+  transform: translateY(-10px);
+  border-color: var(--project-accent);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 40px var(--project-accent);
 }
 
-.glassCard:hover::before { opacity: 1; }
+.glowOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, var(--project-accent) 0%, transparent 60%);
+  opacity: 0.15;
+  filter: blur(40px);
+}
 
-.cardHeader { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
-.folderIcon { font-size: 2rem; filter: grayscale(100%); transition: var(--transition); }
-.glassCard:hover .folderIcon { filter: grayscale(0%); }
+.abstractCode {
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.2rem;
+  z-index: 2;
+  font-weight: 600;
+}
 
-.title { font-size: 1.5rem; color: var(--text-main); font-weight: 700; }
-.description { color: var(--text-muted); margin-bottom: 2rem; font-size: 1.05rem; }
+/* CONTENT SIDE */
+.contentColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
-.techStack { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.title {
+  font-size: 2.2rem;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.descriptionBox {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-glass);
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 5; 
+}
+
+.row .descriptionBox { margin-left: -3rem; }
+.rowReverse .descriptionBox { margin-right: -3rem; }
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
 .techPill {
-  font-size: 0.85rem;
-  color: var(--brand-orange);
-  background: var(--brand-orange-glow);
+  font-size: 0.9rem;
+  color: var(--brand-orange-light);
+  background: rgba(255, 150, 51, 0.1);
   padding: 0.4rem 1rem;
   border-radius: 20px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 150, 51, 0.2);
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.linkBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 1.05rem;
+  transition: var(--transition);
+}
+
+.linkBtn:hover {
+  color: var(--brand-orange);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.linkBtn:hover .arrow {
+  transform: translate(3px, -3px);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Tablets & Small Laptops (Stops the overlapping boxes) */
+@media (max-width: 960px) {
+  .projectCard.row, 
+  .projectCard.rowReverse { 
+    flex-direction: column; 
+    gap: 3rem; 
+  }
+  
+  .visualColumn, 
+  .contentColumn { 
+    width: 100%; 
+  }
+
+  /* Reset the overlapping margins so the box fits nicely under the image */
+  .row .descriptionBox, 
+  .rowReverse .descriptionBox { 
+    margin: 0; 
+  }
+
+  .headerWrapper {
+    margin-bottom: 3.5rem;
+  }
+}
+
+/* Mobile Phones (Shrinks text and tightens padding) */
+@media (max-width: 600px) {
+  .projectsSection { 
+    padding: 5rem 5%; 
+  }
+  
+  .heading { 
+    font-size: 2.5rem; 
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .abstractCode {
+    font-size: 1rem; /* Keeps the code snippet from overflowing its box */
+  }
+
+  .showcase {
+    gap: 4.5rem; /* Reduces the massive cinematic gap for smaller scrolling */
+  }
+
+  .techPill {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
+  }
 }

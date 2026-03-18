@@ -1,75 +1,173 @@
-/* src/features/skills/Skills.module.css */
-
 .skillsSection { 
   padding: 8rem 5%; 
   background-color: var(--bg-dark); 
   position: relative; 
+  overflow: hidden;
 }
 
 .container { 
   max-width: 1200px; 
   margin: 0 auto; 
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Split layout! */
+  gap: 5rem;
+  align-items: center;
 }
 
-.heading { 
-  font-size: 3rem; 
-  margin-bottom: 4rem; 
-  text-align: center; 
-  font-weight: 800; 
-  color: var(--text-main); 
+/* --- LEFT SIDE: ORBITAL VISUAL --- */
+.visualColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 400px;
 }
 
-.grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-  gap: 2rem; 
+.orbitWrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Frosted Glass Effect */
-.categoryCard {
+.centerNode {
+  width: 100px;
+  height: 100px;
+  background: var(--brand-orange);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 800;
+  color: #000;
+  box-shadow: 0 0 30px var(--brand-orange-glow);
+  z-index: 10;
+  line-height: 1.2;
+}
+
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed var(--border-glass);
+  animation: spin linear infinite;
+}
+
+.orbit1 { width: 200px; height: 200px; animation-duration: 15s; }
+.orbit2 { width: 300px; height: 300px; animation-duration: 25s; animation-direction: reverse; }
+.orbit3 { width: 400px; height: 400px; animation-duration: 35s; }
+
+/* The planets counter-rotate so the text stays upright */
+.techPlanet {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-card);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--brand-orange);
+  color: var(--text-main);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  animation: counterSpin linear infinite;
+}
+
+.orbit1 .techPlanet { animation-duration: 15s; }
+.orbit2 .techPlanet { animation-duration: 25s; animation-direction: reverse; }
+.orbit3 .techPlanet { animation-duration: 35s; }
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+@keyframes counterSpin { 100% { transform: rotate(-360deg); } }
+
+/* --- RIGHT SIDE: STACKED CONTENT --- */
+.contentColumn { display: flex; flex-direction: column; }
+
+.headerWrapper { margin-bottom: 3rem; }
+.heading { font-size: 3.5rem; font-weight: 800; color: var(--text-main); line-height: 1.1; margin-bottom: 0.5rem; }
+.subtext { color: var(--text-muted); font-size: 1.1rem; }
+
+.stackContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skillStrip {
   background: var(--bg-card);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-glass);
-  padding: 2rem;
-  border-radius: var(--border-radius);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   transition: var(--transition);
+  position: relative;
+  overflow: hidden;
 }
 
-.categoryCard:hover { 
-  border-color: rgba(255, 150, 51, 0.3); 
-  transform: translateY(-8px); 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4); 
+.skillStrip:hover {
+  background: rgba(255, 150, 51, 0.05);
+  border-color: rgba(255, 150, 51, 0.4);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.stripLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 200px;
+}
+
+.accentLine {
+  width: 4px;
+  height: 24px;
+  background: var(--brand-orange);
+  border-radius: 4px;
+  box-shadow: 0 0 10px var(--brand-orange-glow);
 }
 
 .categoryTitle { 
-  font-size: 1.3rem; 
-  margin-bottom: 1.5rem; 
+  font-size: 1.2rem; 
   color: var(--text-main); 
-  font-weight: 600; 
+  font-weight: 700; 
 }
 
 .tags { 
   display: flex; 
   flex-wrap: wrap; 
   gap: 0.8rem; 
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .tag {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.4);
   border: 1px solid var(--border-glass);
   padding: 0.5rem 1rem;
-  border-radius: 20px;
+  border-radius: 8px; /* Sharper corners for a tech feel */
   font-size: 0.9rem;
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: 600;
   transition: var(--transition);
 }
 
-/* Lights up the tags when you hover over the card */
-.categoryCard:hover .tag { 
-  border-color: var(--brand-orange-glow); 
-  color: var(--brand-orange-light); 
-  background: rgba(255, 150, 51, 0.05);
+.skillStrip:hover .tag { 
+  border-color: var(--brand-orange); 
+  color: var(--text-main); 
+  box-shadow: inset 0 0 10px rgba(255, 150, 51, 0.2);
+}
 
+/* Responsive Design */
+@media (max-width: 960px) {
+  .container { grid-template-columns: 1fr; gap: 3rem; }
+  .visualColumn { height: 350px; }
+  .orbitWrapper { transform: scale(0.8); }
+  .skillStrip { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .tags { justify-content: flex-start; }
 }
